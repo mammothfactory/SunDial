@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.env
+config/secrets.yaml
+config/*.local.yaml
+firmware/micropython/config.json
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.DS_Store

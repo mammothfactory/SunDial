@@ -1,0 +1,42 @@
+# SunDial demo rooms. Copy to rooms.local.yaml and edit entity ids for your home.
+# One M5Stack Dial v1.1 per room. See docs/POE-WIRING.md for power.
+rooms:
+  - id: living
+    name: Living
+    dial_id: sundial-living-01
+    poe_switch_port: 3
+    lights:
+      entity_id: light.living_room
+      default_brightness: 65
+    fan:
+      entity_id: fan.living_room
+      max_speed: 3
+    hvac:
+      entity_id: climate.living_room
+      default_target_temp_c: 21.5
+  - id: bedroom
+    name: Bedroom
+    dial_id: sundial-bedroom-01
+    poe_switch_port: 4
+    lights:
+      entity_id: light.bedroom
+      default_brightness: 50
+    fan:
+      entity_id: fan.bedroom
+      max_speed: 3
+    hvac:
+      entity_id: climate.bedroom
+      default_target_temp_c: 20.0
+  - id: kitchen
+    name: Kitchen
+    dial_id: sundial-kitchen-01
+    poe_switch_port: 5
+    lights:
+      entity_id: light.kitchen
+      default_brightness: 80
+    fan:
+      entity_id: fan.kitchen
+      max_speed: 3
+    hvac:
+      entity_id: climate.kitchen
+      default_target_temp_c: 21.0

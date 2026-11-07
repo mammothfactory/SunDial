@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SunDial — A familiar touch. In every room.</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <p class="badge">CONCEPT · NOT LIVE YET</p>
+  <h1>Meet SunDial.</h1>
+  <p class="tagline">A familiar touch. In every room.</p>
+
+  <div class="rooms" id="rooms">
+    <button data-room="living" class="active">Living</button>
+    <button data-room="bedroom">Bedroom</button>
+    <button data-room="kitchen">Kitchen</button>
+  </div>
+
+  <div class="dial-wrap">
+    <svg viewBox="0 0 240 240" class="dial" id="dialSvg">
+      <circle cx="120" cy="120" r="108" class="ring-bg"/>
+      <circle cx="120" cy="120" r="108" class="ring" id="ring"/>
+      <circle cx="120" cy="120" r="72" class="inner"/>
+      <text x="120" y="128" class="pct" id="pct">65%</text>
+      <text x="120" y="152" class="label">SUNDIAL</text>
+    </svg>
+    <p id="roomTemp" class="temp"></p>
+  </div>
+
+  <div class="modes" id="modes">
+    <button data-mode="lights" class="active">Lights</button>
+    <button data-mode="fan">Fan</button>
+    <button data-mode="hvac">HVAC</button>
+  </div>
+
+  <div class="controls">
+    <label>Lights <input type="range" id="brightness" min="0" max="100" value="65"> <span id="brightnessVal">65%</span></label>
+    <button id="lightsToggle">Toggle lights</button>
+    <label>Fan speed
+      <select id="fanSpeed"><option value="0">Off</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+    </label>
+    <label>HVAC target °C <input type="number" id="targetTemp" min="16" max="30" step="0.5" value="21.5"></label>
+    <select id="hvacMode"><option>auto</option><option>heat</option><option>cool</option><option>off</option></select>
+    <button id="allOff">All off</button>
+  </div>
+  <p id="status" class="status">Connecting…</p>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* SunDial companion — palette from the concept: deep green, gold, orange ring, cream. */
+:root { --green:#0B2E2B; --panel:#123B36; --gold:#D9A441; --orange:#C65A2E; --cream:#F5EFE6; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--green); color:var(--cream); font-family: system-ui, -apple-system, sans-serif; }
+main { max-width: 560px; margin: 0 auto; padding: 24px 20px 48px; }
+.badge { display:inline-block; border:1px solid var(--gold); color:var(--gold); padding:6px 12px; letter-spacing:.12em; font-size:12px; }
+h1 { font-size: 40px; margin: 16px 0 4px; }
+.tagline { font-size: 20px; font-weight: 600; margin: 0 0 20px; }
+.rooms, .modes { display:flex; gap:8px; margin: 12px 0; }
+button, select, input { font: inherit; }
+.rooms button, .modes button { flex:1; padding:10px; background:var(--panel); color:var(--cream); border:1px solid var(--gold); cursor:pointer; }
+.rooms button.active, .modes button.active { background:var(--gold); color:var(--green); font-weight:700; }
+.dial-wrap { text-align:center; }
+.dial { width: 280px; height: 280px; }
+.ring-bg { fill:none; stroke:#1d4a44; stroke-width:4; }
+.ring { fill:none; stroke:var(--orange); stroke-width:4; stroke-linecap:round; transform: rotate(135deg); transform-origin: 120px 120px; }
+.inner { fill:none; stroke:var(--gold); stroke-width:1; opacity:.6; }
+.pct { fill:var(--cream); font-size:34px; font-weight:700; text-anchor:middle; }
+.label { fill:var(--gold); font-size:12px; letter-spacing:.3em; text-anchor:middle; }
+.temp { color:var(--gold); }
+.controls { display:grid; gap:12px; background:var(--panel); padding:16px; margin-top:16px; }
+.controls button { background:var(--orange); color:var(--cream); border:none; padding:10px; cursor:pointer; }
+.status { color:var(--gold); font-size:13px; }
